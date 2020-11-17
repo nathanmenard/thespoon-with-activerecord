@@ -4,14 +4,15 @@ Rails.application.routes.draw do
   # CRUD
 
   # READ
+  # Create a restaurant
+  get "restaurants/new", to: "restaurants#new" , as: :new_restaurant
 
   # See all restaurants
   get "restaurants", to: "restaurants#index"
 
   # See details about on restaurant
   get "restaurants/:id", to: "restaurants#show", as: :restaurant
-
-  # Create a restaurant
+  post "restaurants", to: "restaurants#create"
 
   # Update a restaurant
 
