@@ -4,19 +4,32 @@ Rails.application.routes.draw do
   # CRUD
 
   # READ
-  # Create a restaurant
-  get "restaurants/new", to: "restaurants#new" , as: :new_restaurant
+  # # Create a restaurant
+  # get "restaurants/new", to: "restaurants#new" , as: :new_rest  aurant
 
-  # See all restaurants
-  get "restaurants", to: "restaurants#index"
+  # # See all restaurants
+  # get "restaurants", to: "restaurants#index"
 
-  # See details about on restaurant
-  get "restaurants/:id", to: "restaurants#show", as: :restaurant
-  post "restaurants", to: "restaurants#create"
+  # # See details about on restaurant
+  # get "restaurants/:id", to: "restaurants#show", as: :restaurant
+  # post "restaurants", to: "restaurants#create"
 
-  # Update a restaurant
-  get "restaurants/:id/edit", to: "restaurants#edit", as: :edit_restaurant
-  patch "restaurants/:id", to: "restaurants#update"
+  # # Update a restaurant
+  # get "restaurants/:id/edit", to: "restaurants#edit", as: :edit_restaurant
+  # patch "restaurants/:id", to: "restaurants#update"
 
-  # Delete a restaurant
+  # # Delete a restaurant
+  # delete "restaurants/:id", to: "restaurants#destroy"
+
+  resources :restaurants
+
+
+
+
+
+  # CRUD
+  # Create || POST
+  # Read   || GET
+  # Update || PATCH
+  # Delete || DELETE
 end
