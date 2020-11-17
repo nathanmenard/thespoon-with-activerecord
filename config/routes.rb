@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   post "restaurants", to: "restaurants#create"
 
   # Update a restaurant
+  get "restaurants/:id/edit", to: "restaurants#edit", as: :edit_restaurant
+  patch "restaurants/:id", to: "restaurants#update"
 
   # Delete a restaurant
 end
