@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   # CRUD
 
   # READ
+
   # See all restaurants
-  #   PATH
   get "restaurants", to: "restaurants#index"
 
   # See details about on restaurant
+  get "restaurants/:id", to: "restaurants#show"
 
   # Create a restaurant
 
