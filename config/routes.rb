@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get "restaurants", to: "restaurants#index"
 
   # See details about on restaurant
-  get "restaurants/:id", to: "restaurants#show"
+  get "restaurants/:id", to: "restaurants#show", as: :restaurant
 
   # Create a restaurant
 
